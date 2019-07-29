@@ -27,14 +27,22 @@ public:
 	virtual void setHeight(short height) { this->height = height; };	
 	void setBackgroundColor(Color backgroundColor) { this->backgroundColor = backgroundColor; };
 	
-
+	void drawShadow(Graphics& g, int x, int y,int width,int height, size_t z);
+	
 	virtual void draw(Graphics& g, int x, int y, size_t z) {};
 	virtual void mousePressed(int x, int y, bool isLeft) {};
 	virtual void keyDown(int keyCode, char charecter) {};
-	virtual short getLeft() { return 0; };
-	virtual short getTop() { return 0; };
+	virtual short getLeft() { return left; };
+	virtual short getTop() { return top; };
+	virtual short getWidth() { return width; };
+	virtual short getHeight() { return height; };
 	virtual void getAllControls(vector<Control*>* controls) {};
-	virtual bool canGetFocus() { return FALSE; };
+	Color getTextColor() { return textColor; };
+	Color getBackgroundColor() { return backgroundColor; }
 	~Control();
+	
+	bool isPressInRange(int x,int y);
+	virtual void focus() {};
+	virtual void unfocus() {};
 };
 

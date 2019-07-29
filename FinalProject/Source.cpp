@@ -4,6 +4,7 @@
 #include "../Controls/Button.h"
 #include "../Controls/TextBox.h"
 #include "../Controls/CheckBox.h"
+#include "../Controls/Label.h"
 
 Panel *mainPanel;
 
@@ -25,6 +26,10 @@ int main(int argc, char** argv)
 
 	CheckBox myCheckBox(3, 3, Color::White, Color::Blue, false, Label("Press"));
 	mainPanel->addControl(&myCheckBox);
+
+	Label titleLabel("This is a demo application made with love by Michael Rokitko, Amit Levy, Eran Maron & Evgeny Alterman",
+						 0, main_height - 3);
+	mainPanel->addControl(&titleLabel);
 
 	EventEngine e;
 	e.run(*mainPanel);

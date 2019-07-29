@@ -3,6 +3,7 @@
 #include "../Controls/Panel.h"
 #include "../Controls/Button.h"
 #include "../Controls/TextBox.h"
+#include "../Controls/CheckBox.h"
 
 Panel *mainPanel;
 
@@ -21,6 +22,9 @@ int main(int argc, char** argv)
 
 	TextBox textBox(2, 10, 35, Color::White, Color::Cyan, "textBox here",30);
     mainPanel->addControl(&textBox);
+
+	CheckBox myCheckBox(3, 3, Color::White, Color::Blue, false, Label("Press"));
+	mainPanel->addControl(&myCheckBox);
 
 	EventEngine e;
 	e.run(*mainPanel);

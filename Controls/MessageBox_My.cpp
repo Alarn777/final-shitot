@@ -1,6 +1,4 @@
-//
-// Created by michael.rokitko on 7/24/2019.
-//
+
 #include <cassert>
 
 #include "MessageBox_My.h"

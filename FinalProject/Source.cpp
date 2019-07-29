@@ -14,7 +14,9 @@ int main_height = 45;
 
 int main(int argc, char** argv)
 {
-
+	auto message =  MessageBox_My(2,20,50,10,Color::White,Color::Cyan,"This pop-up was created by the button, proceed?");
+	
+	mainPanel->addControl(&message);
   	mainPanel = new Panel(0, 0, main_width, main_height, border, Color::White, Color::Blue);
     mainPanel->setName("Console GUI Application");
 	

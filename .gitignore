@@ -1,0 +1,10 @@
+*.o
+final.exe
+/.vscode
+/.idea
+CMakeLists.txt
+/cmake-build-debug
+.idea
+/idea
+*.DS_Store
+Makefile

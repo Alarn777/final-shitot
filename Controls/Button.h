@@ -1,7 +1,3 @@
-//
-// Created by michael.rokitko on 7/21/2019.
-//
-
 #ifndef BUTTON_H
 #define BUTTON_H
 

@@ -5,7 +5,8 @@
 #include "../Controls/TextBox.h"
 #include "../Controls/CheckBox.h"
 #include "../Controls/Label.h"
-#include "../Controls/NumericBox.h"
+#include "../Controls/MessageBox_My.h"
+
 
 Panel *mainPanel;
 
@@ -15,9 +16,6 @@ int main_height = 45;
 
 int main(int argc, char** argv)
 {
-	auto message =  MessageBox_My(2,20,50,10,Color::White,Color::Cyan,"This pop-up was created by the button, proceed?");
-	
-	mainPanel->addControl(&message);
   	mainPanel = new Panel(0, 0, main_width, main_height, border, Color::White, Color::Blue);
     mainPanel->setName("Console GUI Application");
 	
@@ -33,9 +31,12 @@ int main(int argc, char** argv)
 	Label titleLabel("This is a demo application made with love by Michael Rokitko, Amit Levy, Eran Maron & Evgeny Alterman",
 						 0, main_height - 3);
 	mainPanel->addControl(&titleLabel);
-	
 
-	EventEngine e;
+    MessageBox_My message(2,20,50,10,Color::White,Color::Cyan,"This pop-up was created by the button, proceed?");
+    mainPanel->addControl(&message);
+
+
+    EventEngine e;
 	e.run(*mainPanel);
 
 }

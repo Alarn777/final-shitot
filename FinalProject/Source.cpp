@@ -6,7 +6,7 @@
 #include "../Controls/CheckBox.h"
 #include "../Controls/Label.h"
 #include "../Controls/MessageBox_My.h"
-
+#include "../Controls/CheckList.h"
 
 Panel *mainPanel;
 
@@ -25,8 +25,11 @@ int main(int argc, char** argv)
 	TextBox textBox(2, 10, 35, Color::White, Color::Cyan, "textBox here",30);
     mainPanel->addControl(&textBox);
 
-	CheckBox myCheckBox(3, 3, Color::White, Color::Blue, false, Label("Press"));
-	mainPanel->addControl(&myCheckBox);
+	CheckBox myCheckBox1(3, 3, Color::White, Color::Blue, false, Label("Press"));
+	mainPanel->addControl(&myCheckBox1);
+
+	CheckBox myCheckBox2(3, 3, Color::White, Color::Blue, false, Label("Press"));
+	mainPanel->addControl(&myCheckBox2);
 
 	Label titleLabel("This is a demo application made with love by Michael Rokitko, Amit Levy, Eran Maron & Evgeny Alterman",
 						 0, main_height - 3);
@@ -35,8 +38,12 @@ int main(int argc, char** argv)
     MessageBox_My message(2,20,50,10,Color::White,Color::Cyan,"This pop-up was created by the button, proceed?");
     mainPanel->addControl(&message);
 
+	CheckList MycCheckList(1, 1, 15, 8, Color::White, Color::Blue, "Checklist");
+	checkList.addCheckBox(&myCheckBox1);
+	checkList.addCheckBox(&myCheckBox2);
+	middleTopPanel->addControl(&MycCheckList);
 
-    EventEngine e;
+	EventEngine e;
 	e.run(*mainPanel);
 
 }

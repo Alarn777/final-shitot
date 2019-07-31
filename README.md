@@ -2,7 +2,7 @@
 
 Project is made by Michael Rokitko, Amit Levy, Eran Maron, Evgeny Alterman
 
-You have a demo applicaytion including all controlls. (final.exe)
+You have a demo application including all controlls. (final.exe)
 
 Use TAB to move between panels, Mouse and keyboard are active only if the focus is on panel
 

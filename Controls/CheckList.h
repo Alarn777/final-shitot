@@ -1,7 +1,3 @@
-//
-// Created by michael.rokitko on 7/23/2019.
-//
-
 #include "../Common/Control.h"
 
 class CheckList : public Control{

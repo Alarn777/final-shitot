@@ -1,5 +1,4 @@
 *.o
-final.exe
 /.vscode
 /.idea
 CMakeLists.txt
@@ -7,4 +6,3 @@ CMakeLists.txt
 .idea
 /idea
 *.DS_Store
-Makefile

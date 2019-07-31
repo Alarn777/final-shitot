@@ -32,6 +32,7 @@ int main_height = 45;
 
 int main(int argc, char **argv) {
 
+    system("mode 180");
     mainPanel = new Panel(0, 0, main_width, main_height+2, border, Color::White, Color::Blue);
     mainPanel->setName("Console GUI Application");
 
